@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MagTub | Login</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body class="p-0 m-0 bg-black text-white font-mono">
+    <main class="flex flex-row items-center justify-center gap-40 min-h-screen">
+      <div class="left-section">
+        <a href="/index.html" class="p-2 text-center text-8xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-zinc-700 to-orange-600">
+          MagTub
+        </a>
+      </div>
+      <div class="right-section">
+        <div class="login-section flex flex-col items-center justify-center p-3 gap-3">
+          <div class="create-account flex flex-col gap-2 w-72">
+              <input class="text-black p-2 focus:outline-none focus-visible:border-none" type="email" placeholder="Email Address">
+              <input class="text-black p-2 focus:outline-none focus-visible:border-none" type="password" placeholder="Password">
+              <button class="js-button bg-emerald-500 p-2 rounded-sm">
+                Enter
+              </button>
+          </div>
+          <!-- <div class="text">-------- or --------</div>
+          <div class="sign-up-with flex flex-col gap-2 w-72">
+              <input class="text-black p-2" type="email" placeholder="Sign in with Google">
+              <input class="text-black p-2" type="email" placeholder="Sign in with Apple">
+          </div> -->
+        </div>
+        <div class="sign-in-section flex flex-col items-center justify-center text-center gap-2 mt-5">
+          <div class="title">
+            Doesn't have an account?
+          </div>
+          <a href="sign-up.html" target="_blank" class="border-2 border-emerald-500 p-2 w-72 hover:border-white">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

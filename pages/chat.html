@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MagTub | Your Chat</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <!-- TODO understandt this piece of code and change this tailwind*/ -->
+    <style>
+        .all-chat-section {
+            height: calc(100vh - 130px); /* Adjust height to fit within the viewport */
+            overflow-y: auto;
+        }
+    </style>
+  </head>
+  <body class="p-0 m-0 bg-zinc-950 text-white font-mono h-full w-full">
+    <main class="flex">
+        <section class="sidebar flex flex-col min-h-screen items-center relative border-r-sidebar-width border-zinc-800">
+            <div class="search-section p-1 mt-2 mb-2"> 
+                <input class="p-1 text-sm rounded-md focus:outline-none focus-visible:border-none bg-zinc-900" type="search" placeholder="Search">
+            </div>
+            <div class="all-chat-section">
+                <!-- user-1-->
+                <div class="profile-template grid grid-cols-profile-grid gap-3 items-center p-2 cursor-pointer transition hover:bg-white/10">
+                    <div class="profile-image">
+                        <img class="w-10 h-10 rounded-full" src="/images/interlinked.jpg" alt="">
+                    </div>
+                    <div class="profile-text flex flex-col justify-center gap-1">
+                        <div class="user-name-and-date flex items-center justify-between text-sm">
+                            <div class="user-name">
+                                Don Pizza
+                            </div>
+                            <div class="date text-xxs">
+                                11:03 PM
+                            </div>
+                        </div>
+                        <div class="last-chat-and-date text-xs">
+                            Can u send location?
+                        </div>
+                    </div>
+                </div>
+                <!-- user-2-->
+                <div class="profile-template grid grid-cols-profile-grid gap-3 items-center p-2 cursor-pointer transition hover:bg-white/10">                    
+                    <div class="profile-image">
+                        <img class="w-10 h-10 rounded-full" src="/images/joi.jpg" alt="">
+                    </div>
+                    <div class="profile-text flex flex-col justify-center gap-1">
+                        <div class="user-name-and-date flex items-center justify-between text-sm">
+                            <div class="user-name">
+                                Joi
+                            </div>
+                            <div class="date text-xxs">
+                                Now
+                            </div>
+                        </div>
+                        <div class="last-chat text-xs text-orange-600">
+                            <span class="animate-pulse">Typing...</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- user-3-->
+                <div class="profile-template grid grid-cols-profile-grid gap-3 items-center p-2 cursor-pointer transition hover:bg-white/10">                    
+                    <div class="profile-image">
+                        <img class="w-10 h-10 rounded-full" src="/images/highness.jpg" alt="">
+                    </div>
+                    <div class="profile-text flex flex-col justify-center gap-1">
+                        <div class="user-name-and-date flex items-center justify-between text-sm">
+                            <div class="user-name">
+                                DeviousScorpions
+                            </div>
+                            <div class="date text-xxs">
+                                Yesterday
+                            </div>
+                        </div>
+                        <div class="last-chat text-xs">
+                            Call me, ASAP!
+                        </div>
+                    </div>
+                </div>
+                <!-- user-4-->
+                <div class="profile-template grid grid-cols-profile-grid gap-3 items-center p-2 cursor-pointer transition hover:bg-white/10">                    
+                    <div class="profile-image">
+                        <img class="w-10 h-10 rounded-full" src="/images/pepe.png" alt="">
+                    </div>
+                    <div class="profile-text flex flex-col justify-center gap-1">
+                        <div class="user-name-and-date flex items-center justify-between text-sm">
+                            <div class="user-name">
+                                kache
+                            </div>
+                            <div class="date text-xxs">
+                                Aug 2
+                            </div>
+                        </div>
+                        <div class="last-chat text-xs">
+                            Zig greater than C
+                        </div>
+                    </div>
+                </div>
+                <!-- group-chat-1-->
+                <div class="profile-template grid grid-cols-profile-grid gap-3 items-center p-2 cursor-pointer transition hover:bg-white/10">                    
+                    <div class="profile-image">
+                        <img class="w-10 h-10 rounded-full" src="/images/group.jpg" alt="">
+                    </div>
+                    <div class="profile-text flex flex-col justify-center gap-1">
+                        <div class="user-name-and-date flex items-center justify-between text-sm">
+                            <div class="user-name">
+                                Group
+                            </div>
+                            <div class="date text-xxs">
+                                04:37 AM
+                            </div>
+                        </div>
+                        <div class="last-chat text-xs">
+                            Guys, let's go new place
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer-section flex items-center w-full justify-between absolute p-3 bottom-3">
+                <div class="left-container">
+                    <button class="bg-zinc-900 p-2 rounded-full">
+                        <img class="w-5" src="/icons/plus.svg" alt="">
+                    </button> 
+                </div>
+                <div class="right-container">
+                    <button class="bg-zinc-900 p-2 rounded-full">
+                        <img class="w-5" src="/icons/settings.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- !chat -->
+        <section class="chat-view w-full grid grid-rows-chat-grid bg-zinc-900">
+            <div class="call-section flex items-center justify-between p-3 bg-white/5 backdrop-blur-md">
+                <div class="left-section">
+                    <div>Joi</div>
+                </div>
+                <div class="right-section flex items-center justify-center gap-3">
+                    <button>
+                        <img class="w-5" src="/icons/phone.svg" alt="">
+                    </button>
+                    <button>
+                        <img class="w-6" src="/icons/video.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <section class="chat-section flex flex-col p-3">
+                <div class="friend-message-section flex gap-2">
+                    <div class="friend-profile-image">
+                        <img class="w-12 h-12 rounded-full" src="/images/joi.jpg" alt="">
+                    </div>
+                    <div class="friend-message bg-gray-700 p-3 rounded-xl">
+                        <!-- show username only group chat -->
+                        <!-- <div class="friend-name">
+                            Joi
+                        </div> -->
+                        <div class="text">
+                            Wassup, how u doin?
+                        </div>
+                    </div>
+                </div>
+                <div class="user-message-section flex gap-2 justify-end">
+                    <div class="user-message bg-sky-700 p-3 rounded-xl">
+                        <!-- <div class="user-name">
+                            K
+                        </div> -->
+                        <div class="text">
+                            Fine, nothing happen
+                        </div>
+                    </div>
+                    <div class="user-profile-image">
+                        <img class="w-12 h-12 rounded-full" src="/images/k.png" alt="">
+                    </div>
+                </div>
+                <div class="user-message-section flex gap-2 justify-end mt-2 mr-12">
+                    <div class="user-message bg-sky-700 p-3 rounded-xl">
+                        <div class="text">
+                            If u come to home, buy some snacks
+                        </div>
+                    </div>
+                    <div class="user-profile-image">
+                        <img class="w-12 h-12 rounded-full hidden" src="/images/k.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="input-section">
+                <div class="flex items-center justify-center mb-3 gap-2">
+                    <textarea rows="1" class="flex w-9/12 p-3 h-12 max-h-32 text-wrap overflow-hidden resize-none rounded-full focus:outline-none focus-visible:border-none bg-zinc-800" placeholder="Type your message here..."></textarea>
+                    <button class="w-12 h-12 bg-zinc-800 rounded-full p-2 flex items-center justify-center">
+                        &UpArrow;
+                    </button>                       
+                </div>
+            </section>
+        </section>
+    </main>
+  </body>
+</html>
